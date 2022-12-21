@@ -11,27 +11,34 @@ public class task01 {
     it is Fibonacci number, odd number and prime number. Consider reading the number from user input.
         */
 
+        // I USED INTELLIJ AS IDE AND I USED JAVA AS PROGRAMMING LANGUAGE AND THIS METHOD BELONG TO ME
+        // IF YOU WANT I CAN EXPLAIN EVERY PART OF THIS METHOD I WROTE THIS METHOD IN 30 MINUTES
+
+        // method call
         checkNumberWhichGivenByUser();
     }
 
-    // I USED INTELLIJ AS IDE AND I USED JAVA AS PROGRAMMING LANGUAGE AND THIS METHOD BELONG TO ME
-    // IF YOU WANT I CAN EXPLAIN EVERY PART OF THIS METHOD I WROTE THIS METHOD IN 30 MINUTES
+
     public static void checkNumberWhichGivenByUser() {
         int num = 0;
         int counter = 0;
 
+        // To get number from user
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter a number to check if it is fullfilling all three conditions at the same time: Is it fibonacci number, odd number and prime number)");
         num = scan.nextInt();
 
+        // boolean variables to check 3 different conditions
         boolean flag1 = false;
         boolean flag2 = false;
         boolean flag3 = false;
 
+        // To check the number is odd or not
         if (num % 2 == 1) {
             flag1 = true;
         }
 
+        // To check the number is prime or not
         for (int i = 1; i <= num; i++) {
             if (num % i == 0) {
                 counter++;
@@ -42,6 +49,7 @@ public class task01 {
             flag2 = true;
         }
 
+        // To check number is fibonacci or not
         List<Integer> fibonacciList = new ArrayList<>();
         int fibo1 = 1;
         int fibo2 = 1;
@@ -62,6 +70,7 @@ public class task01 {
         }
 
 
+        // To check all conditions
         if (flag1 == true && flag2 == true && flag3 == true) {
             System.out.println(num + " is fullfilling all 3 conditions at the same time: It is Fibonacci number, odd number and prime number");
         } else {
